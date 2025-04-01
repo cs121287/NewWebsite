@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casa Del Sol AZ</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
   <link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat|Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,9 +18,9 @@
   </script>
   <script src="js/modal.js"></script>
   <script src="js/parallax.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/modal.css" />
+  <script src="js/about.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/modal.css">
 </head>
-
 <body>
   <nav>
     <div class="logo">
@@ -73,11 +73,40 @@
     <div class="caption">
       <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
     </div>
-  </div>
+    <div class="container">
+      <h2 class="section-title anim1">Our Venue</h2>
 
-  <div id="about-content" class="section" style="background-color:white;">
-    <h3 style="text-align:center;color: #777;">About</h3>
-    <p>This is a placeholder for the About section.</p>
+      <div class="about-grid">
+        <div class="about-image reveal-element anim1">
+          <img src="img/venue-1.jpg" alt="Casa Del Sol AZ Event Venue" loading="lazy">
+        </div>
+
+        <div class="about-content reveal-element anim1">
+          <h3>Elegant Celebrations in Phoenix</h3>
+          <p>Located in the heart of Phoenix, Casa Del Sol offers a stunning backdrop for your special event. Our venue combines elegant architecture with breathtaking views of the surrounding landscape, creating an unforgettable setting for your celebration.</p>
+          <p>Whether you're planning a wedding, quinceañera, memorial service, corporate event, or any special celebration, our dedicated team will ensure every detail is perfect.</p>
+
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-users"></i>
+              <span>Up to 300 guests</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Conveniently located near 2 major highways</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-mountain"></i>
+              <span>Picturesque outdoor space</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-car"></i>
+              <span>Ample parking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="services" class="bgimg-2">
@@ -150,6 +179,7 @@
   <script src="js/script.js"></script>
   <script src="js/form-validation.js"></script>
   <script src="js/form-handler.js"></script>
+    <script src="js/about.js"></script>
+	<script src="js/CSSRulePlugin.js"></script>
 </body>
-
 </html>
