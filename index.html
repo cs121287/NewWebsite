@@ -16,8 +16,6 @@
       console.log("EmailJS initialized");
     })();
   </script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/parallax.js"></script>
   <script src="js/about.js"></script>
@@ -25,6 +23,50 @@
   <script src="js/form-validation.js"></script>
   <script src="js/form-handler.js"></script>
   <link rel="stylesheet" type="text/css" href="css/modal.css">
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 2; /* Ensure the caption is above the video */
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 3; /* Ensure the logo is above the video */
+    }
+    .nav-links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3; /* Ensure the navigation is above the video */
+    }
+    .burger {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 3; /* Ensure the burger menu is above the video */
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -32,12 +74,12 @@
       <img src="img/logo.png" alt="Casa Del Sol AZ" width="165" height="75">
     </div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#rentals">Rentals</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#location">Location</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="burger">
@@ -49,20 +91,18 @@
 
   <div id="home" class="bgimg-1">
     <div class="video-container">
-      <video autoplay loop muted playsinline>
-        <source src="vid/background.mp4" type="video/mp4">
-      </video>
+      <iframe src="https://www.youtube.com/embed/zwWP9s3hdqQ?autoplay=1&loop=1&playlist=zwWP9s3hdqQ&controls=0&showinfo=0&autohide=1&modestbranding=1&mute=1&rel=0&iv_load_policy=3" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div class="caption">
         <div class="sp-container">
           <div class="sp-content">
             <h2 class="frame-1">Casa Del Sol AZ</h2>
-            <h3 class="frame-2">Where memories are made</h3>
+            <h3 class="frame-2"></h3>
           </div>
         </div>
         <div class="sp-container">
           <div class="sp-content">
-            <h2 class="frame-1">Welcome to Our Venue</h2>
-            <h3 class="frame-2">Elegance and Style</h3>
+            <h2 class="frame-1"></h2>
+            <h3 class="frame-2">Where memories are made</h3>
           </div>
         </div>
       </div>
@@ -116,7 +156,7 @@
 
   <div id="services" class="bgimg-2">
     <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SERVICES</span>
     </div>
   </div>
 
@@ -127,7 +167,7 @@
 
   <div id="rentals" class="bgimg-3">
     <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">STYLE</span>
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">RENTALS</span>
     </div>
   </div>
 
@@ -156,6 +196,17 @@
   <div id="gallery-content" class="section" style="background-color:#f1f1f1;">
     <h3 style="text-align:center;color: #777;">Gallery</h3>
     <p>This is a placeholder for the Gallery section.</p>
+  </div>
+  
+  <div id="location" class="bgimg-1">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LOCATION</span>
+    </div>
+  </div>
+
+  <div id="location-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Location</h3>
+    <p>This is a placeholder for the Location section.</p>
   </div>
 
   <div id="contact" class="bgimg-1">
