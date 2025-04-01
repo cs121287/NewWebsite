@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Del Sol AZ</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat|Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("k3ULrYvtaqqqOTKc0");
+      console.log("EmailJS initialized");
+    })();
+  </script>
+  <script src="js/modal.js"></script>
+  <script src="js/parallax.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/modal.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="img/logo.png" alt="Casa Del Sol AZ" width="165" height="75">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#rentals">Rentals</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <div id="page" class="video-background">
+    <video autoplay loop muted playsinline>
+      <source src="vid/background.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  <div id="home" class="bgimg-1">
+    <div class="caption">
+      <div class="sp-container">
+        <div class="sp-content">
+          <h2 class="frame-1">Casa Del Sol AZ</h2>
+          <h3 class="frame-2"></h3>
+        </div>
+      </div>
+      <div class="sp-container">
+        <div class="sp-content">
+          <h2 class="frame-1"></h2>
+          <h3 class="frame-2">Where memories are made</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Home</h3>
+    <p>This is a placeholder for the Home section.</p>
+  </div>
+  
+  <div id="about" class="bgimg-2">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
+    </div>
+  </div>
+
+  <div id="about-content" class="section" style="background-color:white;">
+    <h3 style="text-align:center;color: #777;">About</h3>
+    <p>This is a placeholder for the About section.</p>
+  </div>
+
+  <div id="services" class="bgimg-2">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
+    </div>
+  </div>
+
+  <div id="services-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Services</h3>
+    <p>This is a placeholder for the Services section.</p>
+  </div>
+
+  <div id="rentals" class="bgimg-3">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">STYLE</span>
+    </div>
+  </div>
+
+  <div id="rentals-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Rentals</h3>
+    <p>This is a placeholder for the Rentals section.</p>
+  </div>
+
+  <div id="faq" class="bgimg-1">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">FAQ</span>
+    </div>
+  </div>
+
+  <div id="faq-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">FAQ</h3>
+    <p>This is a placeholder for the FAQ section.</p>
+  </div>
+
+  <div id="gallery" class="bgimg-3">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">GALLERY</span>
+    </div>
+  </div>
+
+  <div id="gallery-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Gallery</h3>
+    <p>This is a placeholder for the Gallery section.</p>
+  </div>
+
+  <div id="contact" class="bgimg-1">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CONTACT</span>
+    </div>
+  </div>
+
+  <div id="contact-content" class="section" style="background-color:#f1f1f1;">
+    <h3 style="text-align:center;color: #777;">Contact</h3>
+    <p>This is a placeholder for the Contact section.</p>
+  </div>
+
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
+
+  <footer class="footer">
+    <p class="foot">18401 W Moreland St, Goodyear, AZ 85338 - Copyright &copy;Casa Del Sol AZ 2025<p>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/form-handler.js"></script>
+</body>
+
+</html>
