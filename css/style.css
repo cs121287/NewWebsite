@@ -14,13 +14,24 @@ body, html {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 8vh;
   background-color: #222222;
   font-family: Montserrat;
-  z-index: 2;
-  position: relative;
+  z-index: 3; /* Ensure the nav is above the video */
+  position: absolute; /* Make the nav overlap the video */
+  width: 100%; /* Make the nav stretch across the top */
+  top: 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the header container */
+  padding: 0 20px; /* Add padding to the sides */
 }
 
 .logo {
@@ -29,12 +40,13 @@ nav {
   letter-spacing: 5px;
   font-size: 30px;
   padding-left: 5px;
+  z-index: 4; /* Ensure the logo is above the nav */
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: auto;
 }
 
 .nav-links li {
@@ -49,7 +61,7 @@ nav {
   letter-spacing: 3px;
   display: block;
   border-radius: 5px;
-  padding: 0 25px;
+  padding: 0 15px; /* Reduce the padding between the links */
   font-size: 15px;
   line-height: 30px;
   position: relative;
@@ -144,27 +156,23 @@ nav {
   overflow: hidden;
 }
 
-.video-container video {
+.video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border: 0;
 }
 
 .caption {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #f1f1f1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
+  z-index: 2; /* Ensure the caption is above the video */
 }
 
 .section {
@@ -197,11 +205,11 @@ h3 {
 }
 
 .bgimg-2 {
-  background-image: url(https://static.wixstatic.com/media/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg/v1/fill/w_2020,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.webp);
+  background-image: url(https://static.wixstatic.com/media/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg/v1/fill/w_2020,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg);
 }
 
 .bgimg-3 {
-  background-image: url(https://static.wixstatic.com/media/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1704,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.webp);
+  background-image: url(https://static.wixstatic.com/media/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1704,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg);
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -384,7 +392,7 @@ body {
 @keyframes blurFadeInOut {
   0% {
     opacity: 0;
-    text-shadow: 0px 0px 40px #fff;
+    text-shadow: px 0px 40px #fff;
     transform: scale(1.3);
   }
   20%, 75% {
