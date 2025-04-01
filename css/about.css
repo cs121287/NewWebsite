@@ -1,0 +1,90 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.about-section {
+  background: url("img/about-bg.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.about-content h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.2em;
+  line-height: 1.7em;
+  margin-bottom: 20px;
+}
+
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+/* Animation styles */
+.anim1 {
+  opacity: 0; /* Ensure elements are hidden initially */
+}
+
+span:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+  transform-origin: 100% 0;
+}
