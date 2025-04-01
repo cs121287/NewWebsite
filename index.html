@@ -25,25 +25,36 @@
   <link rel="stylesheet" type="text/css" href="css/modal.css">
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <img src="img/logo.png" alt="Casa Del Sol AZ" width="165" height="75">
+  <!-- New Navigation Bar -->
+  <div id="slider-wrapper">
+    <div id="dots">
+      <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#rentals">Rentals</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div id="arrow-left" class="nav-arrow"></div>
+    <div id="image-slider">
+      <ul>
+        <li class="active-img"><img src="img/nav-about.jpg" alt="About" /></li>
+        <li><img src="img/nav-services.jpg" alt="Services" /></li>
+        <li><img src="img/nav-rentals.jpg" alt="Rentals" /></li>
+        <li><img src="img/nav-faq.jpg" alt="FAQ" /></li>
+        <li><img src="img/nav-gallery.jpg" alt="Gallery" /></li>
+        <li><img src="img/nav-contact.jpg" alt="Contact" /></li>
+      </ul>
+      <div id="nav-bar">
+        <a href="#about"><div><img src="img/nav-about.jpg" /></div>About</a>
+        <a href="#services"><div><img src="img/nav-services.jpg" /></div>Services</a>
+        <a href="#rentals"><div><img src="img/nav-rentals.jpg" /></div>Rentals</a>
+        <a href="#faq"><div><img src="img/nav-faq.jpg" /></div>FAQ</a>
+        <a href="#gallery"><div><img src="img/nav-gallery.jpg" /></div>Gallery</a>
+        <a href="#contact"><div><img src="img/nav-contact.jpg" /></div>Contact</a>
+      </div>
     </div>
-  </nav>
+    <div id="arrow-right" class="nav-arrow"></div>
+  </div>
 
   <article class="homepage-story">
     <section id="home" class="section homepage-story-slide slide-snap">
