@@ -23,50 +23,6 @@
   <script src="js/form-validation.js"></script>
   <script src="js/form-handler.js"></script>
   <link rel="stylesheet" type="text/css" href="css/modal.css">
-  <style>
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      overflow: hidden;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      z-index: 2; /* Ensure the caption is above the video */
-    }
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 3; /* Ensure the logo is above the video */
-    }
-    .nav-links {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 3; /* Ensure the navigation is above the video */
-    }
-    .burger {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      z-index: 3; /* Ensure the burger menu is above the video */
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -74,12 +30,12 @@
       <img src="img/logo.png" alt="Casa Del Sol AZ" width="165" height="75">
     </div>
     <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#rentals">Rentals</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#location">Location</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="burger">
@@ -89,136 +45,130 @@
     </div>
   </nav>
 
-  <div id="home" class="bgimg-1">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/zwWP9s3hdqQ?autoplay=1&loop=1&playlist=zwWP9s3hdqQ&controls=0&showinfo=0&autohide=1&modestbranding=1&mute=1&rel=0&iv_load_policy=3" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <article class="homepage-story">
+    <section id="home" class="section homepage-story-slide slide-snap">
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="vid/background.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <div class="sp-container">
+            <div class="sp-content">
+              <h2 class="frame-1">Casa Del Sol AZ</h2>
+              <h3 class="frame-2"></h3>
+            </div>
+          </div>
+          <div class="sp-container">
+            <div class="sp-content">
+              <h2 class="frame-1"></h2>
+              <h3 class="frame-2">Where memories are made</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="home-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">Home</h3>
+      <p>This is a placeholder for the Home section.</p>
+    </section>
+
+    <section id="about" class="section homepage-story-slide slide-snap bgimg-2">
       <div class="caption">
-        <div class="sp-container">
-          <div class="sp-content">
-            <h2 class="frame-1">Casa Del Sol AZ</h2>
-            <h3 class="frame-2"></h3>
-          </div>
-        </div>
-        <div class="sp-container">
-          <div class="sp-content">
-            <h2 class="frame-1"></h2>
-            <h3 class="frame-2">Where memories are made</h3>
-          </div>
-        </div>
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
       </div>
-    </div>
-  </div>
-
-  <div id="home-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Home</h3>
-    <p>This is a placeholder for the Home section.</p>
-  </div>
-  
-  <div id="about" class="bgimg-2">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">ELEGANCE</span>
-    </div>
-    <div class="container">
-      <h2 class="section-title anim1">Our Venue</h2>
-
-      <div class="about-grid">
-        <div class="about-image reveal-element anim1">
-          <img src="img/venue-1.jpg" alt="Casa Del Sol AZ Event Venue" loading="lazy">
-        </div>
-
-        <div class="about-content reveal-element anim1">
-          <h3>Elegant Celebrations in Phoenix</h3>
-          <p>Located in the heart of Phoenix, Casa Del Sol offers a stunning backdrop for your special event. Our venue combines elegant architecture with breathtaking views of the surrounding landscape, creating an unforgettable setting for your celebration.</p>
-          <p>Whether you're planning a wedding, quinceañera, memorial service, corporate event, or any special celebration, our dedicated team will ensure every detail is perfect.</p>
-
-          <div class="about-features">
-            <div class="feature">
-              <i class="fas fa-users"></i>
-              <span>Up to 300 guests</span>
-            </div>
-            <div class="feature">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Conveniently located near 2 major highways</span>
-            </div>
-            <div class="feature">
-              <i class="fas fa-mountain"></i>
-              <span>Picturesque outdoor space</span>
-            </div>
-            <div class="feature">
-              <i class="fas fa-car"></i>
-              <span>Ample parking</span>
+      <div class="container">
+        <h2 class="section-title anim1">Our Venue</h2>
+        <div class="about-grid">
+          <div class="about-image reveal-element anim1">
+            <img src="img/venue-1.jpg" alt="Casa Del Sol AZ Event Venue" loading="lazy">
+          </div>
+          <div class="about-content reveal-element anim1">
+            <h3>Elegant Celebrations in Phoenix</h3>
+            <p>Located in the heart of Phoenix, Casa Del Sol offers a stunning backdrop for your special event. Our venue combines elegant architecture with breathtaking views of the surrounding landscape, creating an unforgettable setting for your celebration.</p>
+            <p>Whether you're planning a wedding, quinceañera, memorial service, corporate event, or any special celebration, our dedicated team will ensure every detail is perfect.</p>
+            <div class="about-features">
+              <div class="feature">
+                <i class="fas fa-users"></i>
+                <span>Up to 300 guests</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Conveniently located near 2 major highways</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-mountain"></i>
+                <span>Picturesque outdoor space</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-car"></i>
+                <span>Ample parking</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="services" class="bgimg-2">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SERVICES</span>
-    </div>
-  </div>
+    <section id="services" class="section homepage-story-slide slide-snap bgimg-2">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SERVICES</span>
+      </div>
+    </section>
 
-  <div id="services-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Services</h3>
-    <p>This is a placeholder for the Services section.</p>
-  </div>
+    <section id="services-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">Services</h3>
+      <p>This is a placeholder for the Services section.</p>
+    </section>
 
-  <div id="rentals" class="bgimg-3">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">RENTALS</span>
-    </div>
-  </div>
+    <section id="rentals" class="section homepage-story-slide slide-snap bgimg-3">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">STYLE</span>
+      </div>
+    </section>
 
-  <div id="rentals-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Rentals</h3>
-    <p>This is a placeholder for the Rentals section.</p>
-  </div>
+    <section id="rentals-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">Rentals</h3>
+      <p>This is a placeholder for the Rentals section.</p>
+    </section>
 
-  <div id="faq" class="bgimg-1">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">FAQ</span>
-    </div>
-  </div>
+    <section id="faq" class="section homepage-story-slide slide-snap bgimg-1">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">FAQ</span>
+      </div>
+    </section>
 
-  <div id="faq-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">FAQ</h3>
-    <p>This is a placeholder for the FAQ section.</p>
-  </div>
+    <section id="faq-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">FAQ</h3>
+      <p>This is a placeholder for the FAQ section.</p>
+    </section>
 
-  <div id="gallery" class="bgimg-3">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">GALLERY</span>
-    </div>
-  </div>
+    <section id="gallery" class="section homepage-story-slide slide-snap bgimg-3">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">GALLERY</span>
+      </div>
+    </section>
 
-  <div id="gallery-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Gallery</h3>
-    <p>This is a placeholder for the Gallery section.</p>
-  </div>
-  
-  <div id="location" class="bgimg-1">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LOCATION</span>
-    </div>
-  </div>
+    <section id="gallery-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">Gallery</h3>
+      <p>This is a placeholder for the Gallery section.</p>
+    </section>
 
-  <div id="location-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Location</h3>
-    <p>This is a placeholder for the Location section.</p>
-  </div>
+    <section id="contact" class="section homepage-story-slide slide-snap bgimg-1">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CONTACT</span>
+      </div>
+    </section>
 
-  <div id="contact" class="bgimg-1">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CONTACT</span>
-    </div>
-  </div>
+    <section id="contact-content" class="section homepage-story-slide slide-snap" style="background-color:#f1f1f1;">
+      <h3 style="text-align:center;color: #777;">Contact</h3>
+      <p>This is a placeholder for the Contact section.</p>
+    </section>
 
-  <div id="contact-content" class="section" style="background-color:#f1f1f1;">
-    <h3 style="text-align:center;color: #777;">Contact</h3>
-    <p>This is a placeholder for the Contact section.</p>
-  </div>
+    <footer class="section homepage-story-slide slide-snap" style="background-color:#222222;">
+      <p class="foot">18401 W Moreland St, Goodyear, AZ 85338 - Copyright &copy;Casa Del Sol AZ 2025</p>
+    </footer>
+  </article>
 
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
@@ -228,9 +178,5 @@
       $(".loader-wrapper").fadeOut("slow");
     });
   </script>
-
-  <footer class="footer">
-    <p class="foot">18401 W Moreland St, Goodyear, AZ 85338 - Copyright &copy;Casa Del Sol AZ 2025<p>
-  </footer>
 </body>
 </html>
