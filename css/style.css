@@ -10,28 +10,19 @@ body, html {
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 8vh;
   background-color: #222222;
   font-family: Montserrat;
-  z-index: 3; /* Ensure the nav is above the video */
-  position: absolute; /* Make the nav overlap the video */
-  width: 100%; /* Make the nav stretch across the top */
-  top: 0;
-}
-
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Limit the maximum width of the header container */
-  padding: 0 20px; /* Add padding to the sides */
+  z-index: 2;
+  position: relative;
 }
 
 .logo {
@@ -40,13 +31,12 @@ nav .container {
   letter-spacing: 5px;
   font-size: 30px;
   padding-left: 5px;
-  z-index: 4; /* Ensure the logo is above the nav */
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: auto;
+  width: 60%;
 }
 
 .nav-links li {
@@ -61,7 +51,7 @@ nav .container {
   letter-spacing: 3px;
   display: block;
   border-radius: 5px;
-  padding: 0 15px; /* Reduce the padding between the links */
+  padding: 0 15px; /* Reduced padding for less space between links */
   font-size: 15px;
   line-height: 30px;
   position: relative;
@@ -156,29 +146,34 @@ nav .container {
   overflow: hidden;
 }
 
-.video-container iframe {
+.video-container video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
 }
 
 .caption {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f1f1f1;
   text-align: center;
-  z-index: 2; /* Ensure the caption is above the video */
 }
 
 .section {
   position: relative;
   z-index: 2;
   padding: 50px 80px;
+  scroll-snap-align: start;
 }
 
 .caption span.border {
@@ -205,11 +200,11 @@ h3 {
 }
 
 .bgimg-2 {
-  background-image: url(https://static.wixstatic.com/media/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg/v1/fill/w_2020,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg);
+  background-image: url(https://static.wixstatic.com/media/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.jpg/v1/fill/w_2020,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_b6f659eac28d4287ab0a0f7ff1fb2060~mv2_d_5312_2988_s_4_2.webp);
 }
 
 .bgimg-3 {
-  background-image: url(https://static.wixstatic.com/media/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1704,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg);
+  background-image: url(https://static.wixstatic.com/media/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1704,h_1136,al_c,q_90,usm_0.66_1.00_0.01/a44a27_2137d6716bdb4ecd9ad85a915d683f07~mv2_d_1920_1280_s_2.webp);
 }
 
 @media only screen and (max-device-width: 1024px) {
