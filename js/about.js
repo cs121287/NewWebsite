@@ -1,13 +1,19 @@
-var rule = CSSRulePlugin.getRule("span:after");
+document.addEventListener('DOMContentLoaded', () => {
+  const animElements = document.querySelectorAll('.anim1');
+  const borderElement = document.querySelector('.border');
 
-// Timeline for animations
-var tl = gsap.timeline({defaults:{duration: 1}});
-tl.from(".anim1", {y:-50, stagger: .6, opacity: 0})
-  .to(rule, {duration: 1.8, cssRule: {scaleY: 0}}, "-=2.2")
-  .from("#about", {backgroundPosition: '200px 0px', opacity: 0}, "-=1.5")
-  .from(".about-image img", {y:30, opacity: 0}, "-=.5");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
 
-// Add event listener if needed for any interactive elements
-// Example: document.getElementById('cta').addEventListener('click', () => {
-//   tl.reversed() ? tl.play() : tl.reverse();
-// });
+  animElements.forEach(el => observer.observe(el));
+  if (borderElement) {
+    observer.observe(borderElement);
+  }
+});
